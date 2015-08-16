@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Java on Arkadios Tsamourliadis </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://localhost:1313/categories/java/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Mon, 10 Aug 2015 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Heroku Java example</title>
+      <link>http://localhost:1313/post/heroku-java-example/</link>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/post/heroku-java-example/</guid>
+      <description>
+
+&lt;p&gt;Here &lt;a href=&#34;https://github.com/atsamour/Heroku-java-example&#34;&gt;https://github.com/atsamour/Heroku-java-example&lt;/a&gt; you can find a sample Java web project for &lt;a href=&#34;https//www.heroku.com&#34;&gt;Heroku&lt;/a&gt; PaaS cloud. You can also run it locally with only JRE and Maven installed, as it doesn&amp;rsquo;t requre a seperate application container. It evaluates Heroku&amp;rsquo;s &lt;a href=&#34;http://github.com/jsimone/webapp-runner&#34;&gt;open source&lt;/a&gt; with embedded Tomcat.&lt;/p&gt;
+
+&lt;h2 id=&#34;to-run-locally:20e20672b402207805168c82317f257f&#34;&gt;To run locally&lt;/h2&gt;
+
+&lt;p&gt;First you have to git pull the repo to your PC, then build the application running this command from the local project folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::term
+$ mvn package
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then you just run the application by using the java command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::term
+$ java -jar target/dependency/webapp-runner.jar target/*.war
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If everything worked correctly, your application should be accessible at &lt;code&gt;localhost:8080&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;to-run-on-heroku-cloud:20e20672b402207805168c82317f257f&#34;&gt;To run on Heroku cloud&lt;/h2&gt;
+
+&lt;p&gt;First create a Heroku account, install Heroku Toolbelt as described &lt;a href=&#34;https://devcenter.heroku.com/articles/getting-started-with-java#set-up&#34;&gt;here&lt;/a&gt;, then deploy the app on Heroku as described &lt;a href=&#34;https://devcenter.heroku.com/articles/getting-started-with-java#deploy-the-app&#34;&gt;here&lt;/a&gt;.
+If everything worked correctly, your should see the application in your browser.&lt;/p&gt;
+
+&lt;h3 id=&#34;to-deploying-a-jar-filer-that-doesn-t-exist-at-maven-repository:20e20672b402207805168c82317f257f&#34;&gt;To deploying a jar filer that doesn&amp;rsquo;t exist at Maven repository&lt;/h3&gt;
+
+&lt;p&gt;Download and put the .jar (e.g.) file to the project&amp;rsquo;s folder (e.g. C:\Users\username\Dropbox\heroku-examples\appfolder)
+Then call mvn deploy:deploy-file to actually deploy the jar to &lt;code&gt;repo&lt;/code&gt; folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::term
+mvn deploy:deploy-file -Durl=file:///C:\Users\username\Dropbox\heroku-examples\appfolder\repo -Dfile=json-taglib-0.4.1.jar -DgroupId=atg.taglib.json -DartifactId=json-taglib -Dpackaging=jar -Dversion=0.4.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You are ready to add this dependancy to your main pom file as any other.
+more info here: &lt;a href=&#34;https://maven.apache.org/guides/mini/guide-3rd-party-jars-remote.html&#34;&gt;https://maven.apache.org/guides/mini/guide-3rd-party-jars-remote.html&lt;/a&gt;, &lt;a href=&#34;https://devcenter.heroku.com/articles/local-maven-dependencies&#34;&gt;https://devcenter.heroku.com/articles/local-maven-dependencies&lt;/a&gt;s&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
