@@ -15,8 +15,20 @@
     <link href="" rel="alternate" type="application/rss+xml" title="Arkadios Tsamourliadis" />
     
     <script src="http://atsamour.github.io/js/jquery.min.js"></script>
-    <script src="http://atsamour.github.io/js/main.min.js">
+    <script src="http://atsamour.github.io/js/main.min.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66441259-1', 'auto');
+      ga('send', 'pageview');
+
     </script>
+    
 </head>
 
   <body>
@@ -32,7 +44,7 @@
     <div class="panel-main">
         <div class="panel-main__inner panel-inverted">
             <div class="panel-main__content"> 
-                <a href="http://atsamour.github.io/" title="link to homepage for Arkadios Tsamourliadis"> <img src="http://atsamour.github.io/../images/logo.jpg" width="80" alt="Arkadios Tsamourliadis logo" class="panel-cover__logo logo" /> </a> 
+                <a href="http://atsamour.github.io/" title="link to homepage for Arkadios Tsamourliadis"> <img src="../images/logo.jpg" width="80" alt="Arkadios Tsamourliadis logo" class="panel-cover__logo logo" /> </a> 
                 <h1 class="panel-cover__title panel-title">
                     <a href="http://atsamour.github.io/"  title="link to homepage for Arkadios Tsamourliadis">Arkadios Tsamourliadis</a>
                 </h1>
@@ -48,20 +60,16 @@
     <ul class="navigation"> 
         
         <li class="navigation__item">
-            <a href="https://facebook.com/arkadios.tsam" title="arkadios.tsam on facebook"> <i class='fa fa-facebook'></i> <span class="label">Facebook</span> </a>
-        </li>  
-        
-        <li class="navigation__item">
             <a href="http://twitter.com/atsamour" title="@atsamour on Twitter"> <i class='fa fa-twitter'></i> <span class="label">Twitter</span> </a>
-        </li>  </br> 
+        </li>   
         
         <li class="navigation__item">
             <a href="https://github.com/atsamour" title="atsamour on github"> <i class='fa fa-github'></i> <span class="label">Github</span> </a>
-        </li>  
+        </li>  </br>  
         
         <li class="navigation__item">
             <a href="https://gr.linkedin.com/pub/arkadios-tsamourliadis/32/a09/625" title="Linkedin"> <i class='fa fa-linkedin'></i> <span class="label">Linkedin</span> </a>
-        </li> 
+        </li>   </ul>
 </nav>
  </div>
             </div>
@@ -99,20 +107,16 @@
     <ul class="navigation"> 
         
         <li class="navigation__item">
-            <a href="https://facebook.com/arkadios.tsam" title="arkadios.tsam on facebook"> <i class='fa fa-facebook'></i> <span class="label">Facebook</span> </a>
-        </li>  
-        
-        <li class="navigation__item">
             <a href="http://twitter.com/atsamour" title="@atsamour on Twitter"> <i class='fa fa-twitter'></i> <span class="label">Twitter</span> </a>
-        </li>  </br> 
+        </li>   
         
         <li class="navigation__item">
             <a href="https://github.com/atsamour" title="atsamour on github"> <i class='fa fa-github'></i> <span class="label">Github</span> </a>
-        </li>  
+        </li>  </br>  
         
         <li class="navigation__item">
             <a href="https://gr.linkedin.com/pub/arkadios-tsamourliadis/32/a09/625" title="Linkedin"> <i class='fa fa-linkedin'></i> <span class="label">Linkedin</span> </a>
-        </li> 
+        </li>   </ul>
 </nav>
  </div>
                 </div>
@@ -158,7 +162,7 @@ If everything worked correctly, your should see the application in your browser.
 Then call mvn deploy:deploy-file to actually deploy the jar to <code>repo</code> folder:</p>
 
 <pre><code>:::term
-mvn deploy:deploy-file -Durl=file:///C:\Users\username\Dropbox\heroku-examples\appfolder\repo -Dfile=json-taglib-0.4.1.jar -DgroupId=atg.taglib.json -DartifactId=json-taglib -Dpackaging=jar -Dversion=0.4.1
+mvn deploy:deploy-file -Durl=file:///C:\Users\username\Dropbox\heroku-examples\appfolder\repo\ -Dfile=json-taglib-0.4.1.jar -DgroupId=atg.taglib.json -DartifactId=json-taglib -Dpackaging=jar -Dversion=0.4.1
 </code></pre>
 
 <p>You are ready to add this dependancy to your main pom file as any other.
@@ -177,12 +181,12 @@ more info here: <a href="https://maven.apache.org/guides/mini/guide-3rd-party-ja
 <a href="http://www.reddit.com/submit?url=http%3a%2f%2fatsamour.github.io%2fpost%2fheroku-java-example%2f" target="_blank" title="Reddit" class="reddit"><span class="fa fa-reddit-square fa-3x"></span></a>
 
 </div>
-        
-
-
         <br/>
         <section>
-          <div id="disqus_thread"></div>
+          
+
+
+<div id="disqus_thread"></div>
 <script type="text/javascript">
      
     var disqus_shortname = 'atsamour-githubio'; 
@@ -193,6 +197,8 @@ more info here: <a href="https://maven.apache.org/guides/mini/guide-3rd-party-ja
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
+
+
         </section>
         <section>
           <footer class="footer">
@@ -202,9 +208,8 @@ more info here: <a href="https://maven.apache.org/guides/mini/guide-3rd-party-ja
 	    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution">Some rights reserved</a>
 	    </p>
         <nav>
-            <a href="atsamour.github.io">Arkadios Tsamourliadis</a> &middot;
+            <a href="http://atsamour.github.io">Arkadios Tsamourliadis</a> &middot;
             <a href="http://atsamour.github.io">Blog</a> &middot;
-            <a href="http://atsamour.github.io">Product</a> &middot;
             <a href="http://atsamour.github.io">About</a>
         </nav>
         
@@ -220,7 +225,6 @@ more info here: <a href="https://maven.apache.org/guides/mini/guide-3rd-party-ja
         </section>
       </div>
     </div>
-
   </body>
   
 </html>

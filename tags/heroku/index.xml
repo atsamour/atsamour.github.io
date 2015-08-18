@@ -46,7 +46,7 @@ If everything worked correctly, your should see the application in your browser.
 Then call mvn deploy:deploy-file to actually deploy the jar to &lt;code&gt;repo&lt;/code&gt; folder:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;:::term
-mvn deploy:deploy-file -Durl=file:///C:\Users\username\Dropbox\heroku-examples\appfolder\repo -Dfile=json-taglib-0.4.1.jar -DgroupId=atg.taglib.json -DartifactId=json-taglib -Dpackaging=jar -Dversion=0.4.1
+mvn deploy:deploy-file -Durl=file:///C:\Users\username\Dropbox\heroku-examples\appfolder\repo\ -Dfile=json-taglib-0.4.1.jar -DgroupId=atg.taglib.json -DartifactId=json-taglib -Dpackaging=jar -Dversion=0.4.1
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You are ready to add this dependancy to your main pom file as any other.
