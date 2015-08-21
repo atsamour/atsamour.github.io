@@ -1865,7 +1865,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #3D4260; }
+  color: #51577f; }
   a:hover {
     color: #1f2231;
     -o-transition: .5s;
@@ -2040,6 +2040,7 @@ pre {
   padding: 2em 0 0 0;
   border-top: 2px solid #DDDDDD;
   font-size: .7em;
+  background: whitesmoke;
   color: #b3b3b3; }
 
 .footer__copyright {
