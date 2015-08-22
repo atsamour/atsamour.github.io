@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Application on Arkadios Tsamourliadis</title>
+      <title>Application on Arkadios Tsamourliadis </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
     <link>http://atsamour.github.io/tags/application/</link>
-    <description>Recent content in Application on Arkadios Tsamourliadis</description>
-    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://atsamour.github.io/tags/application/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <updated>Tue, 18 Aug 2015 00:00:00 UTC</updated>
     
     <item>
       <title>Habit@weave Java AAL app</title>
       <link>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
-      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 UTC</pubDate>
       
       <guid>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
       <description>

@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Arkadios Tsamourliadis</title>
+      <title>Posts on Arkadios Tsamourliadis </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
     <link>http://atsamour.github.io/post/</link>
-    <description>Recent content in Posts on Arkadios Tsamourliadis</description>
-    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://atsamour.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <updated>Tue, 18 Aug 2015 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Hugo web-site engine</title>
+      <link>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; introduces itself as a &amp;ldquo;Fast &amp;amp; modern static site engine&amp;rdquo;, with the aim to make the web fun again. After ages of CGI scripts evolution, easy and attractive CMSes, it looks like static page are back in fashion. Initially made popular by &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; a couple of years before, Hugo is one of the last additions to the family.
+It&amp;rsquo;s &lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;open source&lt;/a&gt;, written in &lt;a href=&#34;http://golang.org/&#34;&gt;Go&lt;/a&gt;, with a handful of &lt;a href=&#34;https://github.com/spf13/hugoThemes&#34;&gt;themes&lt;/a&gt;, it&amp;rsquo;s easy to install and use.&lt;/p&gt;
+
+&lt;p&gt;Apart from content – appearance distinction with an excellent theme system, hugo also supports easy metadata integration. These info is included in the very same file with the content to be market in a toml, yaml or json format, as described in hugo’s great &lt;a href=&#34;http://gohugo.io/content/front-matter&#34;&gt;documentation&lt;/a&gt;.
+The content itself can be written in some of the supported formats, for which the documentation links us straight to Hugo&amp;rsquo;s (source)[&lt;a href=&#34;https://github.com/spf13/hugo/blob/77c60a3440806067109347d04eb5368b65ea0fe8/helpers/general.go#L65&#34;&gt;https://github.com/spf13/hugo/blob/77c60a3440806067109347d04eb5368b65ea0fe8/helpers/general.go#L65&lt;/a&gt;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// GuessType attempts to guess the type of file from a given string.
+func GuessType(in string) string {
+    switch strings.ToLower(in) {
+        case &amp;quot;md&amp;quot;, &amp;quot;markdown&amp;quot;, &amp;quot;mdown&amp;quot;:
+            return &amp;quot;markdown&amp;quot;
+        case &amp;quot;asciidoc&amp;quot;, &amp;quot;adoc&amp;quot;, &amp;quot;ad&amp;quot;:
+            return &amp;quot;asciidoc&amp;quot;
+        case &amp;quot;mmark&amp;quot;:
+            return &amp;quot;mmark&amp;quot;
+        case &amp;quot;rst&amp;quot;:
+            return &amp;quot;rst&amp;quot;
+        case &amp;quot;html&amp;quot;, &amp;quot;htm&amp;quot;:
+            return &amp;quot;html&amp;quot;
+    }
+    return &amp;quot;unknown&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hugo then utilizes &lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;Blackfriday&lt;/a&gt; to convert source content file to HTML. More inf on supported formatting is available at &lt;code&gt;Markdown&lt;/code&gt; creator&amp;rsquo;s site: &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;http://daringfireball.net/projects/markdown/syntax&lt;/a&gt; or here: &lt;a href=&#34;https://help.github.com/articles/markdown-basics/&#34;&gt;https://help.github.com/articles/markdown-basics/&lt;/a&gt;. If you&amp;rsquo;re not sure about the outcome of your source, just try it &lt;a href=&#34;http://daringfireball.net/projects/markdown/dingus&#34;&gt;here&lt;/a&gt; before compiling it with Hugo.&lt;/p&gt;
+
+&lt;p&gt;After installing Hugo, writing your content and setting up a theme just type &lt;code&gt;hugo -D -t theme-name&lt;/code&gt; and your site is generated in seconds (or even less) in the /public folder. It is ready to be uploaded.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Habit@weave Java AAL app</title>
       <link>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
-      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 UTC</pubDate>
       
       <guid>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
       <description>
@@ -54,45 +90,9 @@ You can find the sample database used in the application at the &lt;a href=&#34;
     </item>
     
     <item>
-      <title>Hugo web-site engine</title>
-      <link>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
-      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; introduces itself as a &amp;ldquo;Fast &amp;amp; modern static site engine&amp;rdquo;, with the aim to make the web fun again. After ages of CGI scripts evolution, easy and attractive CMSes, it looks like static page are back in fashion. Initially made popular by &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; a couple of years before, Hugo is one of the last additions to the family.
-It&amp;rsquo;s &lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;open source&lt;/a&gt;, written in &lt;a href=&#34;http://golang.org/&#34;&gt;Go&lt;/a&gt;, with a handful of &lt;a href=&#34;https://github.com/spf13/hugoThemes&#34;&gt;themes&lt;/a&gt;, it&amp;rsquo;s easy to install and use.&lt;/p&gt;
-
-&lt;p&gt;Apart from content – appearance distinction with an excellent theme system, hugo also supports easy metadata integration. These info is included in the very same file with the content to be market in a toml, yaml or json format, as described in hugo’s great &lt;a href=&#34;http://gohugo.io/content/front-matter&#34;&gt;documentation&lt;/a&gt;.
-The content itself can be written in some of the supported formats, for which the documentation links us straight to Hugo&amp;rsquo;s (source)[&lt;a href=&#34;https://github.com/spf13/hugo/blob/77c60a3440806067109347d04eb5368b65ea0fe8/helpers/general.go#L65&#34;&gt;https://github.com/spf13/hugo/blob/77c60a3440806067109347d04eb5368b65ea0fe8/helpers/general.go#L65&lt;/a&gt;]&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;// GuessType attempts to guess the type of file from a given string.
-func GuessType(in string) string {
-    switch strings.ToLower(in) {
-        case &amp;quot;md&amp;quot;, &amp;quot;markdown&amp;quot;, &amp;quot;mdown&amp;quot;:
-            return &amp;quot;markdown&amp;quot;
-        case &amp;quot;asciidoc&amp;quot;, &amp;quot;adoc&amp;quot;, &amp;quot;ad&amp;quot;:
-            return &amp;quot;asciidoc&amp;quot;
-        case &amp;quot;mmark&amp;quot;:
-            return &amp;quot;mmark&amp;quot;
-        case &amp;quot;rst&amp;quot;:
-            return &amp;quot;rst&amp;quot;
-        case &amp;quot;html&amp;quot;, &amp;quot;htm&amp;quot;:
-            return &amp;quot;html&amp;quot;
-    }
-    return &amp;quot;unknown&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hugo then utilizes &lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;Blackfriday&lt;/a&gt; to convert source content file to HTML. More inf on supported formatting is available at &lt;code&gt;Markdown&lt;/code&gt; creator&amp;rsquo;s site: &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;http://daringfireball.net/projects/markdown/syntax&lt;/a&gt;. If you&amp;rsquo;re not sure about the outcome of your source, just try it &lt;a href=&#34;http://daringfireball.net/projects/markdown/dingus&#34;&gt;here&lt;/a&gt; before compiling it with Hugo.&lt;/p&gt;
-
-&lt;p&gt;After installing Hugo, writing your content and setting up a theme just type &lt;code&gt;hugo -D -t theme-name&lt;/code&gt; and your site is generated in seconds (or even less) in the /public folder. It is ready to be uploaded.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Heroku Java example</title>
       <link>http://atsamour.github.io/post/heroku-java-example/</link>
-      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 UTC</pubDate>
       
       <guid>http://atsamour.github.io/post/heroku-java-example/</guid>
       <description>
