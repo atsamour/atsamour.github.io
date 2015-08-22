@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Application on Arkadios Tsamourliadis </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Application on Arkadios Tsamourliadis</title>
     <link>http://atsamour.github.io/tags/application/</link>
+    <description>Recent content in Application on Arkadios Tsamourliadis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    
-    
-    <updated>Tue, 18 Aug 2015 00:00:00 UTC</updated>
+    <lastBuildDate>Tue, 18 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://atsamour.github.io/tags/application/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Habit@weave Java AAL app</title>
       <link>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
-      <pubDate>Tue, 18 Aug 2015 00:00:00 UTC</pubDate>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
       <description>
 
-&lt;p&gt;OpenShift is Red Hat&amp;rsquo;s Platform-as-a-Service (PaaS) that allows developers to quickly develop, host, and scale applications in a cloud environment. It has decent documentation and relatively steep learning curve.&lt;/p&gt;
+&lt;p&gt;OpenShift is Red Hat&amp;rsquo;s Platform-as-a-Service (PaaS) that allows developers to quickly develop, host, and scale applications in a cloud environment. It has decent documentation and relatively steep learning curve. It also provides free hosting + free MySQL DB up to 1 GB, which is aweosome!&lt;/p&gt;
 
-&lt;p&gt;After installing &lt;code&gt;Ruby&lt;/code&gt; and &lt;code&gt;RHC&lt;/code&gt;, Openshift&amp;rsquo;s client tool, by following &lt;a href=&#34;https://developers.openshift.com/en/getting-started-overview.html&#34;&gt;these&lt;/a&gt; steps, you can start creating a Java web application following &lt;a href=&#34;https://developers.openshift.com/en/tomcat-getting-started.html&#34;&gt;these&lt;/a&gt; steps.&lt;/p&gt;
+&lt;p&gt;After installing &lt;code&gt;Ruby&lt;/code&gt; and &lt;code&gt;RHC&lt;/code&gt; - Openshift&amp;rsquo;s client tool, by following &lt;a href=&#34;https://developers.openshift.com/en/getting-started-overview.html&#34;&gt;these&lt;/a&gt; steps, you can start creating a Java web application following &lt;a href=&#34;https://developers.openshift.com/en/tomcat-getting-started.html&#34;&gt;these&lt;/a&gt; steps.&lt;/p&gt;
 
 &lt;h1 id=&#34;habit-weave:c6caa8a44e148aae679de3cb093da792&#34;&gt;Habit@weave&lt;/h1&gt;
 
@@ -27,24 +27,26 @@
 The power consumption graphs and the capability to schedule actions can help the user to make the right decisions for efficient energy saving at home, while the calorie consumption and sleep quality charts may contribute to adoption of habits that improve heath. The user can use the application from a PC, as well as from any other portable device with access to the Internet. It is an initial effort towards a functional Ambient Assisted Living system.
 It&amp;rsquo;s also a good starting point for any Java web application with Hibernate JPA and Shiro security frameworks.&lt;/p&gt;
 
-&lt;p&gt;##Demo&lt;/p&gt;
+&lt;h2 id=&#34;demo:c6caa8a44e148aae679de3cb093da792&#34;&gt;Demo&lt;/h2&gt;
 
-&lt;p&gt;Application&amp;rsquo;s demo runs here &lt;a href=&#34;http://habitat-atsamour.rhcloud.com&#34;&gt;http://habitat-atsamour.rhcloud.com&lt;/a&gt;.
-To try the application use these credentials:
-* E-mail: &lt;code&gt;test2@gmail.com&lt;/code&gt;
-* Password: &lt;code&gt;1234&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A demo of the application&amp;rsquo;s runs here &lt;a href=&#34;http://habitat-atsamour.rhcloud.com&#34;&gt;http://habitat-atsamour.rhcloud.com&lt;/a&gt;.
+To try the application use these credentials:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://s4.postimg.org/7sibz1n4d/image.png&#34; alt=&#34;Screenshot&#34; /&gt;
-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;E-mail: &lt;code&gt;test2@gmail.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Password: &lt;code&gt;1234&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;##Code&lt;/p&gt;
+&lt;h2 id=&#34;source:c6caa8a44e148aae679de3cb093da792&#34;&gt;Source&lt;/h2&gt;
 
 &lt;p&gt;The application&amp;rsquo;s git repo is &lt;a href=&#34;https://github.com/atsamour/Habit-at-weave_openshift-MySQL&#34;&gt;here&lt;/a&gt;.
-You can find the sample database used in the application at &lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/atsamourfiles/awesomedb(openshift-MySQL-5.5&#34;&gt;amazon cloud&lt;/a&gt;.zip) (add a database named &lt;code&gt;awesomedb&lt;/code&gt; to the OpenShift MySQL Cartridge and import tables there)&lt;/p&gt;
+You can find the sample database used in the application at the &lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/atsamourfiles/awesomedb(openshift-MySQL-5.5&#34;&gt;amazon cloud&lt;/a&gt;.zip) (add a database named &lt;code&gt;awesomedb&lt;/code&gt; to the OpenShift MySQL Cartridge and import tables there).&lt;/p&gt;
 
 &lt;p&gt;The folders are organized as a Maven project. Backend is written in Java using javax.servlet API, frontend is based on Bootstrap and implemented with JSP views.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://s13.postimg.org/ryipgphmv/sleep.png&#34; alt=&#34;Screenshot&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://s4.postimg.org/7sibz1n4d/image.png&#34; alt=&#34;Screenshot&#34; /&gt;
+
+&lt;img src=&#34;http://s13.postimg.org/ryipgphmv/sleep.png&#34; alt=&#34;Screenshot&#34; /&gt;
 
 &lt;img src=&#34;http://s27.postimg.org/mm701vq3n/activity.png&#34; alt=&#34;Screenshot&#34; /&gt;
 &lt;/p&gt;

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Posts on Arkadios Tsamourliadis </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Posts on Arkadios Tsamourliadis</title>
     <link>http://atsamour.github.io/post/</link>
+    <description>Recent content in Posts on Arkadios Tsamourliadis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    
-    
-    <updated>Tue, 18 Aug 2015 00:00:00 UTC</updated>
+    <lastBuildDate>Tue, 18 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://atsamour.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Habit@weave Java AAL app</title>
       <link>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
-      <pubDate>Tue, 18 Aug 2015 00:00:00 UTC</pubDate>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
       <description>
 
-&lt;p&gt;OpenShift is Red Hat&amp;rsquo;s Platform-as-a-Service (PaaS) that allows developers to quickly develop, host, and scale applications in a cloud environment. It has decent documentation and relatively steep learning curve.&lt;/p&gt;
+&lt;p&gt;OpenShift is Red Hat&amp;rsquo;s Platform-as-a-Service (PaaS) that allows developers to quickly develop, host, and scale applications in a cloud environment. It has decent documentation and relatively steep learning curve. It also provides free hosting + free MySQL DB up to 1 GB, which is aweosome!&lt;/p&gt;
 
-&lt;p&gt;After installing &lt;code&gt;Ruby&lt;/code&gt; and &lt;code&gt;RHC&lt;/code&gt;, Openshift&amp;rsquo;s client tool, by following &lt;a href=&#34;https://developers.openshift.com/en/getting-started-overview.html&#34;&gt;these&lt;/a&gt; steps, you can start creating a Java web application following &lt;a href=&#34;https://developers.openshift.com/en/tomcat-getting-started.html&#34;&gt;these&lt;/a&gt; steps.&lt;/p&gt;
+&lt;p&gt;After installing &lt;code&gt;Ruby&lt;/code&gt; and &lt;code&gt;RHC&lt;/code&gt; - Openshift&amp;rsquo;s client tool, by following &lt;a href=&#34;https://developers.openshift.com/en/getting-started-overview.html&#34;&gt;these&lt;/a&gt; steps, you can start creating a Java web application following &lt;a href=&#34;https://developers.openshift.com/en/tomcat-getting-started.html&#34;&gt;these&lt;/a&gt; steps.&lt;/p&gt;
 
 &lt;h1 id=&#34;habit-weave:c6caa8a44e148aae679de3cb093da792&#34;&gt;Habit@weave&lt;/h1&gt;
 
@@ -27,24 +27,26 @@
 The power consumption graphs and the capability to schedule actions can help the user to make the right decisions for efficient energy saving at home, while the calorie consumption and sleep quality charts may contribute to adoption of habits that improve heath. The user can use the application from a PC, as well as from any other portable device with access to the Internet. It is an initial effort towards a functional Ambient Assisted Living system.
 It&amp;rsquo;s also a good starting point for any Java web application with Hibernate JPA and Shiro security frameworks.&lt;/p&gt;
 
-&lt;p&gt;##Demo&lt;/p&gt;
+&lt;h2 id=&#34;demo:c6caa8a44e148aae679de3cb093da792&#34;&gt;Demo&lt;/h2&gt;
 
-&lt;p&gt;Application&amp;rsquo;s demo runs here &lt;a href=&#34;http://habitat-atsamour.rhcloud.com&#34;&gt;http://habitat-atsamour.rhcloud.com&lt;/a&gt;.
-To try the application use these credentials:
-* E-mail: &lt;code&gt;test2@gmail.com&lt;/code&gt;
-* Password: &lt;code&gt;1234&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A demo of the application&amp;rsquo;s runs here &lt;a href=&#34;http://habitat-atsamour.rhcloud.com&#34;&gt;http://habitat-atsamour.rhcloud.com&lt;/a&gt;.
+To try the application use these credentials:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://s4.postimg.org/7sibz1n4d/image.png&#34; alt=&#34;Screenshot&#34; /&gt;
-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;E-mail: &lt;code&gt;test2@gmail.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Password: &lt;code&gt;1234&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;##Code&lt;/p&gt;
+&lt;h2 id=&#34;source:c6caa8a44e148aae679de3cb093da792&#34;&gt;Source&lt;/h2&gt;
 
 &lt;p&gt;The application&amp;rsquo;s git repo is &lt;a href=&#34;https://github.com/atsamour/Habit-at-weave_openshift-MySQL&#34;&gt;here&lt;/a&gt;.
-You can find the sample database used in the application at &lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/atsamourfiles/awesomedb(openshift-MySQL-5.5&#34;&gt;amazon cloud&lt;/a&gt;.zip) (add a database named &lt;code&gt;awesomedb&lt;/code&gt; to the OpenShift MySQL Cartridge and import tables there)&lt;/p&gt;
+You can find the sample database used in the application at the &lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/atsamourfiles/awesomedb(openshift-MySQL-5.5&#34;&gt;amazon cloud&lt;/a&gt;.zip) (add a database named &lt;code&gt;awesomedb&lt;/code&gt; to the OpenShift MySQL Cartridge and import tables there).&lt;/p&gt;
 
 &lt;p&gt;The folders are organized as a Maven project. Backend is written in Java using javax.servlet API, frontend is based on Bootstrap and implemented with JSP views.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://s13.postimg.org/ryipgphmv/sleep.png&#34; alt=&#34;Screenshot&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://s4.postimg.org/7sibz1n4d/image.png&#34; alt=&#34;Screenshot&#34; /&gt;
+
+&lt;img src=&#34;http://s13.postimg.org/ryipgphmv/sleep.png&#34; alt=&#34;Screenshot&#34; /&gt;
 
 &lt;img src=&#34;http://s27.postimg.org/mm701vq3n/activity.png&#34; alt=&#34;Screenshot&#34; /&gt;
 &lt;/p&gt;
@@ -52,9 +54,45 @@ You can find the sample database used in the application at &lt;a href=&#34;http
     </item>
     
     <item>
+      <title>Hugo web-site engine</title>
+      <link>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; introduces itself as a &amp;ldquo;Fast &amp;amp; modern static site engine&amp;rdquo;, with the aim to make the web fun again. After ages of CGI scripts evolution, easy and attractive CMSes, it looks like static page are back in fashion. Initially made popular by &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; a couple of years before, Hugo is one of the last additions to the family.
+It&amp;rsquo;s &lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;open source&lt;/a&gt;, written in &lt;a href=&#34;http://golang.org/&#34;&gt;Go&lt;/a&gt;, with a handful of &lt;a href=&#34;https://github.com/spf13/hugoThemes&#34;&gt;themes&lt;/a&gt;, it&amp;rsquo;s easy to install and use.&lt;/p&gt;
+
+&lt;p&gt;Apart from content – appearance distinction with an excellent theme system, hugo also supports easy metadata integration. These info is included in the very same file with the content to be market in a toml, yaml or json format, as described in hugo’s great &lt;a href=&#34;http://gohugo.io/content/front-matter&#34;&gt;documentation&lt;/a&gt;.
+The content itself can be written in some of the supported formats, for which the documentation links us straight to Hugo&amp;rsquo;s (source)[&lt;a href=&#34;https://github.com/spf13/hugo/blob/77c60a3440806067109347d04eb5368b65ea0fe8/helpers/general.go#L65&#34;&gt;https://github.com/spf13/hugo/blob/77c60a3440806067109347d04eb5368b65ea0fe8/helpers/general.go#L65&lt;/a&gt;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// GuessType attempts to guess the type of file from a given string.
+func GuessType(in string) string {
+    switch strings.ToLower(in) {
+        case &amp;quot;md&amp;quot;, &amp;quot;markdown&amp;quot;, &amp;quot;mdown&amp;quot;:
+            return &amp;quot;markdown&amp;quot;
+        case &amp;quot;asciidoc&amp;quot;, &amp;quot;adoc&amp;quot;, &amp;quot;ad&amp;quot;:
+            return &amp;quot;asciidoc&amp;quot;
+        case &amp;quot;mmark&amp;quot;:
+            return &amp;quot;mmark&amp;quot;
+        case &amp;quot;rst&amp;quot;:
+            return &amp;quot;rst&amp;quot;
+        case &amp;quot;html&amp;quot;, &amp;quot;htm&amp;quot;:
+            return &amp;quot;html&amp;quot;
+    }
+    return &amp;quot;unknown&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hugo then utilizes &lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;Blackfriday&lt;/a&gt; to convert source content file to HTML. More inf on supported formatting is available at &lt;code&gt;Markdown&lt;/code&gt; creator&amp;rsquo;s site: &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;http://daringfireball.net/projects/markdown/syntax&lt;/a&gt;. If you&amp;rsquo;re not sure about the outcome of your source, just try it &lt;a href=&#34;http://daringfireball.net/projects/markdown/dingus&#34;&gt;here&lt;/a&gt; before compiling it with Hugo.&lt;/p&gt;
+
+&lt;p&gt;After installing Hugo, writing your content and setting up a theme just type &lt;code&gt;hugo -D -t theme-name&lt;/code&gt; and your site is generated in seconds (or even less) in the /public folder. It is ready to be uploaded.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Heroku Java example</title>
       <link>http://atsamour.github.io/post/heroku-java-example/</link>
-      <pubDate>Mon, 10 Aug 2015 00:00:00 UTC</pubDate>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>http://atsamour.github.io/post/heroku-java-example/</guid>
       <description>
