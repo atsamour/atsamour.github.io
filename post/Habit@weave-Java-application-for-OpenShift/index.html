@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title> Hugo web-site engine &middot; Arkadios Tsamourliadis </title>
+    <title> Habit@weave Java AAL app &middot; Arkadios Tsamourliadis </title>
     
     <link rel="stylesheet" type="text/css" href="http://atsamour.github.io/css/uno.min.css" />
     <link rel="stylesheet" type="text/css" href="http://atsamour.github.io/css/lightGallery.css" />
@@ -155,45 +155,53 @@
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
         <div class="post">
-          <h1>Hugo web-site engine</h1>
+          <h1>Habit@weave Java AAL app</h1>
           <span class="post-date">Tue, Aug 18, 2015</span>
-          <p><a href="https://gohugo.io/">Hugo</a> introduces itself as a &ldquo;Fast &amp; modern static site engine&rdquo;, with the aim to make the web fun again. After ages of CGI scripts evolution, easy and attractive CMSes, it looks like static page are back in fashion. Initially made popular by <a href="http://jekyllrb.com/">Jekyll</a> a couple of years before, Hugo is one of the last additions to the family.
-It&rsquo;s <a href="https://github.com/spf13/hugo">open source</a>, written in <a href="http://golang.org/">Go</a>, with a handful of <a href="https://github.com/spf13/hugoThemes">themes</a>, it&rsquo;s easy to install and use.</p>
+          
 
-<p>Apart from content – appearance distinction with an excellent theme system, hugo also supports easy metadata integration. These info is included in the very same file with the content to be market in a toml, yaml or json format, as described in hugo’s great <a href="http://gohugo.io/content/front-matter">documentation</a>.
-The content itself can be written in some of the supported formats, for which the documentation links us straight to Hugo&rsquo;s (source)[<a href="https://github.com/spf13/hugo/blob/77c60a3440806067109347d04eb5368b65ea0fe8/helpers/general.go#L65">https://github.com/spf13/hugo/blob/77c60a3440806067109347d04eb5368b65ea0fe8/helpers/general.go#L65</a>]</p>
+<p>OpenShift is Red Hat&rsquo;s Platform-as-a-Service (PaaS) that allows developers to quickly develop, host, and scale applications in a cloud environment. It has decent documentation and relatively steep learning curve. It also provides free hosting + free MySQL DB up to 1 GB, which is aweosome!</p>
 
-<pre><code>// GuessType attempts to guess the type of file from a given string.
-func GuessType(in string) string {
-    switch strings.ToLower(in) {
-        case &quot;md&quot;, &quot;markdown&quot;, &quot;mdown&quot;:
-            return &quot;markdown&quot;
-        case &quot;asciidoc&quot;, &quot;adoc&quot;, &quot;ad&quot;:
-            return &quot;asciidoc&quot;
-        case &quot;mmark&quot;:
-            return &quot;mmark&quot;
-        case &quot;rst&quot;:
-            return &quot;rst&quot;
-        case &quot;html&quot;, &quot;htm&quot;:
-            return &quot;html&quot;
-    }
-    return &quot;unknown&quot;
-}
-</code></pre>
+<p>After installing <code>Ruby</code> and <code>RHC</code> - Openshift&rsquo;s client tool, by following <a href="https://developers.openshift.com/en/getting-started-overview.html">these</a> steps, you can start creating a Java web application following <a href="https://developers.openshift.com/en/tomcat-getting-started.html">these</a> steps.</p>
 
-<p>Hugo then utilizes <a href="https://github.com/russross/blackfriday">Blackfriday</a> to convert source content file to HTML. More inf on supported formatting is available at <code>Markdown</code> creator&rsquo;s site: <a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a> or here: <a href="https://help.github.com/articles/markdown-basics/">https://help.github.com/articles/markdown-basics/</a>. If you&rsquo;re not sure about the outcome of your source, just try it <a href="http://daringfireball.net/projects/markdown/dingus">here</a> before compiling it with Hugo.</p>
+<h1 id="habit-weave:c6caa8a44e148aae679de3cb093da792">Habit@weave</h1>
 
-<p>After installing Hugo, writing your content and setting up a theme just type <code>hugo -D -t theme-name</code> and your site is generated in seconds (or even less) in the /public folder. It is ready to be uploaded.</p>
+<p>Habit@weave is a web application for the control and monitoring smart homes and wearable devices.
+The power consumption graphs and the capability to schedule actions can help the user to make the right decisions for efficient energy saving at home, while the calorie consumption and sleep quality charts may contribute to adoption of habits that improve heath. The user can use the application from a PC, as well as from any other portable device with access to the Internet. It is an initial effort towards a functional Ambient Assisted Living system.
+It&rsquo;s also a good starting point for any Java web application with Hibernate JPA and Shiro security frameworks.</p>
+
+<h2 id="demo:c6caa8a44e148aae679de3cb093da792">Demo</h2>
+
+<p>A demo of the application&rsquo;s runs here <a href="http://habitat-atsamour.rhcloud.com">http://habitat-atsamour.rhcloud.com</a>.
+To try the application use these credentials:</p>
+
+<ul>
+<li>E-mail: <code>test2@gmail.com</code></li>
+<li>Password: <code>1234</code></li>
+</ul>
+
+<h2 id="source:c6caa8a44e148aae679de3cb093da792">Source</h2>
+
+<p>The application&rsquo;s git repo is <a href="https://github.com/atsamour/Habit-at-weave_openshift-MySQL">here</a>.
+You can find the sample database used in the application at the <a href="https://s3-eu-west-1.amazonaws.com/atsamourfiles/awesomedb(openshift-MySQL-5.5">amazon cloud</a>.zip) (add a database named <code>awesomedb</code> to the OpenShift MySQL Cartridge and import tables there).</p>
+
+<p>The folders are organized as a Maven project. Backend is written in Java using javax.servlet API, frontend is based on Bootstrap and implemented with JSP views.</p>
+
+<p><img src="http://s4.postimg.org/7sibz1n4d/image.png" alt="Screenshot" />
+
+<img src="http://s13.postimg.org/ryipgphmv/sleep.png" alt="Screenshot" />
+
+<img src="http://s27.postimg.org/mm701vq3n/activity.png" alt="Screenshot" />
+</p>
 
         </div>
         <div class="sharing">
-<a href="https://twitter.com/intent/tweet?status=Hugo%20web-site%20engine-http%3a%2f%2fatsamour.github.io%2fpost%2fHabit%40weave-Java-application-for-OpenShift%2f" target="_blank" title="Follow me on Twitter" class="twitter">
+<a href="https://twitter.com/intent/tweet?status=Habit%40weave%20Java%20AAL%20app-http%3a%2f%2fatsamour.github.io%2fpost%2fHabit%40weave-Java-application-for-OpenShift%2f" target="_blank" title="Follow me on Twitter" class="twitter">
 <span class="fa fa-twitter-square fa-3x"></span></a>
 <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fatsamour.github.io%2fpost%2fHabit%40weave-Java-application-for-OpenShift%2f" target="_blank" title="Join me on Facebook" class="facebook">
 <span class="fa fa-facebook-square fa-3x"></span></a>
 <a href="https://plus.google.com/share?url=http%3a%2f%2fatsamour.github.io%2fpost%2fHabit%40weave-Java-application-for-OpenShift%2f" target="_blank" title="Google+" class="googleplus">
 <span class="fa fa-google-plus-square fa-3x"></span></a>
-<a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fatsamour.github.io%2fpost%2fHabit%40weave-Java-application-for-OpenShift%2f&title=Hugo%20web-site%20engine" target="_blank" title="LinkedIn" class="linkedin">
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fatsamour.github.io%2fpost%2fHabit%40weave-Java-application-for-OpenShift%2f&title=Habit%40weave%20Java%20AAL%20app" target="_blank" title="LinkedIn" class="linkedin">
 <span class="fa fa-linkedin-square fa-3x"></span></a>
 <a href="http://www.reddit.com/submit?url=http%3a%2f%2fatsamour.github.io%2fpost%2fHabit%40weave-Java-application-for-OpenShift%2f" target="_blank" title="Reddit" class="reddit"><span class="fa fa-reddit-square fa-3x"></span></a>
 

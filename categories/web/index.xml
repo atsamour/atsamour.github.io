@@ -7,12 +7,12 @@
     <language>en-us</language>
     
     
-    <updated>Tue, 18 Aug 2015 00:00:00 UTC</updated>
+    <updated>Sat, 22 Aug 2015 00:00:00 UTC</updated>
     
     <item>
       <title>Hugo web-site engine</title>
       <link>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
-      <pubDate>Tue, 18 Aug 2015 00:00:00 UTC</pubDate>
+      <pubDate>Sat, 22 Aug 2015 00:00:00 UTC</pubDate>
       
       <guid>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; introduces itself as a &amp;ldquo;Fast &amp;amp; modern static site engine&amp;rdquo;, with the aim to make the web fun again. After ages of CGI scripts evolution, easy and attractive CMSes, it looks like static page are back in fashion. Initially made popular by &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; a couple of years before, Hugo is one of the last additions to the family.
