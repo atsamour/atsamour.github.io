@@ -3,7 +3,7 @@
   <channel>
       <title>Openshift on Arkadios Tsamourliadis </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://atsamour.github.io/tags/openshift/</link>
+    <link>https://atsamour.github.io/tags/openshift/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Habit@weave Java AAL app</title>
-      <link>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
+      <link>https://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 UTC</pubDate>
       
-      <guid>http://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
+      <guid>https://atsamour.github.io/post/Habit@weave-Java-application-for-OpenShift/</guid>
       <description>
 
 &lt;p&gt;OpenShift is Red Hat&amp;rsquo;s Platform-as-a-Service (PaaS) that allows developers to quickly develop, host, and scale applications in a cloud environment. It has decent documentation and relatively steep learning curve. It also provides free hosting + free MySQL DB up to 1 GB, which is aweosome!&lt;/p&gt;
