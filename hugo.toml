@@ -1,0 +1,142 @@
+baseURL = "https://arkadios.me/"
+title = "Arkadios Tsamourliadis"
+theme = "LoveIt"
+
+defaultContentLanguage = "en"
+languageCode = "en-us"
+languageName = "English"
+enableEmoji = true
+enableRobotsTXT = true
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+
+[pagination]
+  pagerSize = 10
+  path = "page"
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[permalinks]
+  [permalinks.page]
+    posts = "/post/:slug/"
+  [permalinks.section]
+    posts = "/post/"
+
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    name = "Posts"
+    url = "/post/"
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+
+[params]
+  defaultTheme = "auto"
+  dateFormat = "2006-01-02"
+  title = "Arkadios Tsamourliadis"
+  description = "$ whois: active developer, passionate reader, curious as a child"
+  images = ["/images/logo.jpg"]
+
+  [params.author]
+    name = "Arkadios Tsamourliadis"
+    email = ""
+    link = "https://arkadios.me/"
+
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      name = "Arkadios Tsamourliadis"
+      typeit = false
+
+  [params.footer]
+    enable = true
+    hugo = true
+    copyright = true
+    author = true
+    since = 2015
+    license = ""
+
+  [params.app]
+    title = "Arkadios Tsamourliadis"
+    noFavicon = true
+
+  [params.seo]
+    image = "/images/background-cover.jpg"
+    thumbnailUrl = "/images/logo.jpg"
+
+  [params.home]
+    [params.home.profile]
+      enable = true
+      gravatarEmail = ""
+      avatarURL = "/images/logo.jpg"
+      title = "Arkadios Tsamourliadis"
+      subtitle = "$ whois: active developer, passionate reader, curious as a child &#8617;"
+      typeit = false
+      social = true
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.social]
+    GitHub = { url = "https://github.com/atsamour", title = "atsamour on GitHub" }
+    Linkedin = { url = "https://gr.linkedin.com/pub/arkadios-tsamourliadis/32/a09/625", title = "LinkedIn" }
+    Facebook = { url = "https://facebook.com/arkadios.tsam", title = "arkadios.tsam on Facebook" }
+    X = { url = "https://twitter.com/atsamour", title = "@atsamour on Twitter" }
+    RSS = true
+
+  [params.page]
+    linkToMarkdown = false
+    rssFullText = true
+    lightgallery = true
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+    [params.page.comment]
+      enable = true
+      [params.page.comment.disqus]
+        enable = true
+        shortname = "atsamour-githubio"
+    [params.page.seo.publisher]
+      name = "Arkadios Tsamourliadis"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    lineNos = false
+    noClasses = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
