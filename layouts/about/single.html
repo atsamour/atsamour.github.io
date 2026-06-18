@@ -1,0 +1,122 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+  {{- $params := .Scratch.Get "params" -}}
+  <article class="page single cv-single">
+    <h1 class="single-title animate__animated animate__fadeInDown">{{ .Title | emojify }}</h1>
+    {{- with $params.subtitle -}}
+      <h2 class="single-subtitle">{{ . }}</h2>
+    {{- end -}}
+
+    <div class="content" id="content">
+      <div class="cv-page">
+        <aside class="cv-sidebar">
+          <img class="cv-avatar" src="/images/logo.jpg" alt="Arkadios Tsamourliadis">
+          <p class="cv-kicker">$ whoami</p>
+          <p class="cv-intro">Builder and lead in IT, focused on useful systems, calm delivery, and readable technology.</p>
+          <nav class="cv-nav" aria-label="CV sections">
+            <a href="#profile">Profile</a>
+            <a href="#experience">Experience</a>
+            <a href="#work">Selected Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </aside>
+
+        <div class="cv-main">
+          <section id="profile" class="cv-section">
+            <p class="cv-section-label">Profile</p>
+            <h2>Pragmatic technical leadership with hands-on engineering roots.</h2>
+            <p>I build and lead software work with a bias for clarity, durable systems, and teams that can keep moving without unnecessary friction. My background is rooted in web applications, Java ecosystems, cloud platforms, and the practical side of getting ideas from source code to something people can actually use.</p>
+            <div class="cv-highlights">
+              <span>Technical direction</span>
+              <span>Delivery planning</span>
+              <span>Backend systems</span>
+              <span>Cloud platforms</span>
+            </div>
+          </section>
+
+          <section id="experience" class="cv-section">
+            <p class="cv-section-label">Experience</p>
+            <h2>Focus Areas</h2>
+            <div class="cv-timeline">
+              <article class="cv-item">
+                <div class="cv-item-meta">Leadership</div>
+                <div>
+                  <h3>Technical Leadership</h3>
+                  <p>Shaping technical direction, clarifying ambiguous work, and helping teams turn problems into deliverable slices without losing sight of maintainability.</p>
+                </div>
+              </article>
+              <article class="cv-item">
+                <div class="cv-item-meta">Engineering</div>
+                <div>
+                  <h3>Software Engineering</h3>
+                  <p>Building web applications and backend services, with experience around Java, Maven, servlet-based applications, JSP, Hibernate JPA, Apache Shiro, and MySQL.</p>
+                </div>
+              </article>
+              <article class="cv-item">
+                <div class="cv-item-meta">Delivery</div>
+                <div>
+                  <h3>Cloud and Deployment</h3>
+                  <p>Deploying and operating applications on platform services such as OpenShift and Heroku, with attention to packaging, configuration, and reliable handoff.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section id="work" class="cv-section">
+            <p class="cv-section-label">Selected Work</p>
+            <h2>Projects and Notes</h2>
+            <div class="cv-projects">
+              <a class="cv-project" href="/post/Habit@weave-Java-application-for-OpenShift/">
+                <span>Habit@weave Java AAL App</span>
+                <small>Java · OpenShift · MySQL</small>
+              </a>
+              <a class="cv-project" href="/post/heroku-java-example/">
+                <span>Heroku Java Example</span>
+                <small>Java · Maven · Heroku</small>
+              </a>
+              <a class="cv-project" href="/post/Hugo-this-site's-engine/">
+                <span>This Site</span>
+                <small>Hugo · Go · Web</small>
+              </a>
+            </div>
+          </section>
+
+          <section id="skills" class="cv-section">
+            <p class="cv-section-label">Skills</p>
+            <h2>Tools and Ways of Working</h2>
+            <div class="cv-skill-groups">
+              <div>
+                <h3>Languages and Platforms</h3>
+                <p>Java · JavaScript · Go · SQL · Markdown · Hugo</p>
+              </div>
+              <div>
+                <h3>Backend and Web</h3>
+                <p>Servlet API · JSP · Maven · Hibernate JPA · Apache Shiro · REST-oriented applications</p>
+              </div>
+              <div>
+                <h3>Cloud and Delivery</h3>
+                <p>OpenShift · Heroku · MySQL · Git · Static site deployment</p>
+              </div>
+              <div>
+                <h3>Practice</h3>
+                <p>Technical leadership · Delivery planning · Documentation · Code review · Problem decomposition</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" class="cv-section cv-contact">
+            <p class="cv-section-label">Elsewhere</p>
+            <h2>Find Me</h2>
+            <p>
+              <a href="https://github.com/atsamour">GitHub</a>
+              <a href="https://linkedin.com/in/atsamour">LinkedIn</a>
+              <a href="/index.xml">RSS</a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+{{- end -}}

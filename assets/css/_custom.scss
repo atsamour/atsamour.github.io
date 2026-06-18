@@ -1,15 +1,309 @@
-.single {
-  .single-title {
-    font-size: 1.85rem;
+/* Slightly larger post body text. */
+.single .content {
+  font-size: 1.12rem;
+  line-height: 1.85;
+}
+
+/*
+  Center the desktop header on the same column as LoveIt's .page content.
+  The calc subtracts the main container's 1rem padding on both sides.
+*/
+#header-desktop .header-wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: calc(64% - 1.28rem);
+}
+
+@media only screen and (max-width: 1440px) {
+  #header-desktop .header-wrapper {
+    width: calc(56% - 1.12rem);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #header-desktop .header-wrapper {
+    width: calc(52% - 1.04rem);
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #header-desktop .header-wrapper {
+    width: calc(80% - 1.6rem);
+  }
+}
+
+/* Improve homepage summary readability. */
+.home[data-home=posts] .summary .content {
+  color: $global-font-color;
+
+  [theme=dark] & {
+    color: $global-font-color-dark;
   }
 
-  .content {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     font-size: 1.08rem;
-    line-height: 1.8;
+    line-height: 1.6;
+  }
+}
 
-    p,
-    li {
-      line-height: 1.8;
+/* CV-style About page, scoped so posts keep the normal LoveIt layout. */
+.cv-single {
+  max-width: 1080px;
+  width: 82%;
+
+  > .single-title,
+  > .single-subtitle {
+    text-align: left;
+  }
+
+  > .single-title {
+    font-size: 2.1rem;
+    margin-bottom: .35rem;
+  }
+}
+
+.cv-page {
+  display: grid;
+  grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cv-sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + 1.5rem);
+  align-self: start;
+  padding: 1.1rem;
+  border: 1px solid $global-border-color;
+  border-radius: .75rem;
+  background: rgba($global-background-color, .72);
+
+  [theme=dark] & {
+    border-color: $global-border-color-dark;
+    background: rgba($header-background-color-dark, .6);
+  }
+}
+
+.cv-avatar {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin: 0 0 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cv-kicker,
+.cv-section-label,
+.cv-item-meta,
+.cv-project small {
+  color: $global-font-secondary-color;
+  font-size: .78rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+
+  [theme=dark] & {
+    color: $global-font-secondary-color-dark;
+  }
+}
+
+.cv-intro {
+  margin: .5rem 0 1rem;
+  line-height: 1.55;
+}
+
+.cv-nav {
+  display: grid;
+  gap: .35rem;
+  margin-top: 1rem;
+
+  a {
+    padding: .3rem 0;
+    border-bottom: 1px solid transparent;
+    font-size: .94rem;
+  }
+
+  a:hover {
+    border-bottom-color: $single-link-color;
+  }
+}
+
+.cv-main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cv-section {
+  padding: 1.4rem 0 1.6rem;
+  border-top: 1px solid $global-border-color;
+
+  [theme=dark] & {
+    border-top-color: $global-border-color-dark;
+  }
+
+  h2 {
+    margin-top: .15rem;
+  }
+}
+
+.cv-highlights,
+.cv-projects {
+  display: grid;
+  gap: .65rem;
+  margin-top: 1rem;
+}
+
+.cv-highlights {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  span {
+    padding: .55rem .7rem;
+    border-left: 3px solid $single-link-color;
+    background: rgba($single-link-color, .08);
+
+    [theme=dark] & {
+      border-left-color: $single-link-color-dark;
+      background: rgba($single-link-color-dark, .08);
     }
+  }
+}
+
+.cv-timeline {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cv-timeline::before {
+  content: "";
+  position: absolute;
+  top: .45rem;
+  bottom: .45rem;
+  left: .35rem;
+  width: 1px;
+  background: $global-border-color;
+
+  [theme=dark] & {
+    background: $global-border-color-dark;
+  }
+}
+
+.cv-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1rem;
+  padding-left: 1.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: .45rem;
+    left: .05rem;
+    width: .65rem;
+    height: .65rem;
+    border-radius: 50%;
+    background: $single-link-color;
+
+    [theme=dark] & {
+      background: $single-link-color-dark;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: .25rem;
+  }
+}
+
+.cv-project {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .8rem 0;
+  border-bottom: 1px solid $global-border-color;
+  transition: padding-left .2s ease, border-color .2s ease;
+
+  [theme=dark] & {
+    border-bottom-color: $global-border-color-dark;
+  }
+
+  &:hover {
+    padding-left: .4rem;
+    border-bottom-color: $single-link-color;
+  }
+}
+
+.cv-skill-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+
+  div {
+    padding: .95rem;
+    border: 1px solid $global-border-color;
+    border-radius: .5rem;
+
+    [theme=dark] & {
+      border-color: $global-border-color-dark;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: .35rem;
+  }
+}
+
+.cv-contact p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.cv-contact a {
+  padding: .4rem .7rem;
+  border: 1px solid $global-border-color;
+  border-radius: 999px;
+
+  [theme=dark] & {
+    border-color: $global-border-color-dark;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .cv-single {
+    width: 88%;
+  }
+
+  .cv-page {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-sidebar {
+    position: static;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .cv-single {
+    width: 100%;
+  }
+
+  .cv-highlights,
+  .cv-skill-groups,
+  .cv-item {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-item {
+    gap: .25rem;
   }
 }
