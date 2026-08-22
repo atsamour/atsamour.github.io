@@ -307,3 +307,34 @@
     gap: .25rem;
   }
 }
+
+/* Keep the site footer present but visually quiet. */
+footer.footer {
+  margin-top: auto;
+  color: $global-font-secondary-color;
+
+  .footer-container {
+    font-size: .8rem;
+  }
+
+  .footer-line,
+  a,
+  a::before,
+  a::after {
+    color: inherit;
+  }
+
+  a:hover,
+  a:active {
+    color: rgba($global-font-color, .62);
+  }
+
+  [theme=dark] & {
+    color: $global-font-secondary-color-dark;
+
+    a:hover,
+    a:active {
+      color: rgba($global-font-color-dark, .68);
+    }
+  }
+}
