@@ -338,3 +338,258 @@ footer.footer {
     }
   }
 }
+
+/* Private feedback and support form. */
+.feedback-single {
+  width: 92%;
+  max-width: 48rem;
+}
+
+.feedback-header {
+  margin: 0 auto 2rem;
+
+  .single-title {
+    margin: .25rem 0 .5rem;
+    text-align: left;
+  }
+}
+
+.feedback-kicker {
+  margin: 0;
+  color: $single-link-color;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  [theme=dark] & {
+    color: $single-link-color-dark;
+  }
+}
+
+.feedback-subtitle {
+  margin: 0;
+  color: $global-font-secondary-color;
+  font-size: 1.15rem;
+
+  [theme=dark] & {
+    color: $global-font-secondary-color-dark;
+  }
+}
+
+.feedback-intro {
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  line-height: 1.7;
+}
+
+.feedback-panel {
+  padding: 1.5rem;
+  border: 1px solid $global-border-color;
+  border-radius: .8rem;
+  background: rgba($global-background-color, .78);
+  box-shadow: 0 .6rem 1.8rem rgba(0, 0, 0, .05);
+
+  [theme=dark] & {
+    border-color: $global-border-color-dark;
+    background: rgba($header-background-color-dark, .62);
+    box-shadow: 0 .6rem 1.8rem rgba(0, 0, 0, .18);
+  }
+}
+
+.feedback-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.feedback-field {
+  display: grid;
+  align-content: start;
+  gap: .4rem;
+
+  label {
+    font-size: .92rem;
+    font-weight: 600;
+
+    span {
+      color: $global-font-secondary-color;
+      font-size: .78rem;
+      font-weight: 400;
+
+      [theme=dark] & {
+        color: $global-font-secondary-color-dark;
+      }
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: .7rem .75rem;
+    border: 1px solid $global-border-color;
+    border-radius: .45rem;
+    background: $global-background-color;
+    color: $global-font-color;
+    font: inherit;
+    line-height: 1.4;
+    transition: border-color .16s ease, box-shadow .16s ease;
+
+    [theme=dark] & {
+      border-color: $global-border-color-dark;
+      background: $global-background-color-dark;
+      color: $global-font-color-dark;
+    }
+
+    &:focus {
+      border-color: $single-link-color;
+      box-shadow: 0 0 0 .18rem rgba($single-link-color, .16);
+      outline: none;
+
+      [theme=dark] & {
+        border-color: $single-link-color-dark;
+        box-shadow: 0 0 0 .18rem rgba($single-link-color-dark, .18);
+      }
+    }
+  }
+
+  textarea {
+    min-height: 10rem;
+    resize: vertical;
+  }
+
+  small {
+    color: $global-font-secondary-color;
+    font-size: .76rem;
+    line-height: 1.45;
+
+    [theme=dark] & {
+      color: $global-font-secondary-color-dark;
+    }
+  }
+}
+
+.feedback-field-wide,
+.feedback-actions,
+.feedback-status {
+  grid-column: 1 / -1;
+}
+
+.feedback-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.feedback-verification {
+  min-height: 4rem;
+}
+
+.feedback-setup-notice,
+.feedback-status {
+  margin: 0;
+  padding: .8rem 1rem;
+  border-radius: .45rem;
+  line-height: 1.5;
+}
+
+.feedback-setup-notice,
+.feedback-status-progress {
+  border: 1px solid rgba($single-link-color, .25);
+  background: rgba($single-link-color, .08);
+}
+
+.feedback-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feedback-submit {
+  flex: 0 0 auto;
+  min-width: 9.5rem;
+  padding: .72rem 1rem;
+  border: 1px solid $single-link-color;
+  border-radius: .45rem;
+  background: $single-link-color;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  transition: filter .16s ease, transform .16s ease;
+
+  [theme=dark] & {
+    border-color: $single-link-color-dark;
+    background: $single-link-color-dark;
+  }
+
+  &:hover:not(:disabled) {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: .18rem solid rgba($single-link-color, .3);
+    outline-offset: .16rem;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    filter: grayscale(.45);
+    opacity: .6;
+  }
+}
+
+.feedback-privacy {
+  margin: 0;
+  color: $global-font-secondary-color;
+  font-size: .78rem;
+  line-height: 1.45;
+
+  [theme=dark] & {
+    color: $global-font-secondary-color-dark;
+  }
+}
+
+.feedback-status-success {
+  border: 1px solid rgba(43, 142, 78, .35);
+  background: rgba(43, 142, 78, .1);
+}
+
+.feedback-status-error {
+  border: 1px solid rgba(190, 52, 52, .35);
+  background: rgba(190, 52, 52, .1);
+}
+
+@media only screen and (max-width: 680px) {
+  .feedback-single {
+    width: 100%;
+  }
+
+  .feedback-panel {
+    padding: 1rem;
+  }
+
+  .feedback-form {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback-field,
+  .feedback-field-wide,
+  .feedback-actions,
+  .feedback-status {
+    grid-column: 1;
+  }
+
+  .feedback-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .feedback-submit {
+    width: 100%;
+  }
+}

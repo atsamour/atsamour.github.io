@@ -43,6 +43,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     identifier = "About"
     name = "About"
     url = "/about"
+  [[menu.main]]
+    weight = 4
+    identifier = "feedback"
+    name = "Feedback"
+    url = "/feedback/"
 
 [params]
   defaultTheme = "auto"
@@ -55,6 +60,12 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     name = "Arkadios Tsamourliadis"
     email = ""
     link = "https://arkadios.me/"
+
+  [params.feedback]
+    endpoint = "https://feedback.arkadios.me/v1/feedback"
+    # Add the public Turnstile sitekey after creating the widget in Cloudflare.
+    # The form stays disabled until this value is configured.
+    turnstileSiteKey = ""
 
   [params.header]
     desktopMode = "fixed"

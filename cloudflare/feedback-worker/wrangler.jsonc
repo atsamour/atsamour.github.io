@@ -1,0 +1,36 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "arkadios-feedback",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-22",
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "feedback.arkadios.me",
+      "custom_domain": true
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "arkadios-feedback",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "support@arkadios.me"
+    }
+  ],
+  "vars": {
+    "ALLOWED_ORIGINS": "https://arkadios.me",
+    "SUPPORT_EMAIL": "support@arkadios.me",
+    "FROM_EMAIL": "feedback@arkadios.me",
+    "TURNSTILE_EXPECTED_HOSTNAME": "arkadios.me"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

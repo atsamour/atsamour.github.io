@@ -1,0 +1,20 @@
+{
+  "name": "arkadios-feedback-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "test": "node --experimental-strip-types --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test",
+    "db:migrate:local": "wrangler d1 migrations apply arkadios-feedback --local",
+    "db:migrate:remote": "wrangler d1 migrations apply arkadios-feedback --remote"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260804.1",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.124.0"
+  }
+}

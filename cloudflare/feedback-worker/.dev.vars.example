@@ -1,0 +1,7 @@
+# Cloudflare's documented always-pass Turnstile test secret is suitable only
+# for local development. Use `wrangler secret put TURNSTILE_SECRET` in production.
+TURNSTILE_SECRET=1x0000000000000000000000000000000AA
+ALLOWED_ORIGINS=http://localhost:1313
+TURNSTILE_EXPECTED_HOSTNAME=localhost
+SUPPORT_EMAIL=support@arkadios.me
+FROM_EMAIL=feedback@arkadios.me

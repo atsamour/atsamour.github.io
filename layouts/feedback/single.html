@@ -1,0 +1,131 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+  {{- $params := .Scratch.Get "params" -}}
+  {{- $feedback := .Site.Params.feedback | default dict -}}
+  {{- $endpoint := $feedback.endpoint | default "https://feedback.arkadios.me/v1/feedback" -}}
+  {{- $siteKey := $feedback.turnstileSiteKey | default "" -}}
+
+  <article class="page single feedback-single">
+    <header class="feedback-header">
+      <p class="feedback-kicker">support@arkadios.me</p>
+      <h1 class="single-title animate__animated animate__fadeInDown">{{ .Title | emojify }}</h1>
+      {{- with $params.subtitle -}}
+        <p class="feedback-subtitle">{{ . }}</p>
+      {{- end -}}
+      <p class="feedback-intro">
+        Send a private message using the form below. It is saved before being forwarded
+        to the same support inbox for a response.
+      </p>
+    </header>
+
+    <div class="feedback-panel">
+      <form
+        id="feedback-form"
+        class="feedback-form"
+        data-endpoint="{{ $endpoint }}"
+        novalidate
+      >
+        <div class="feedback-field feedback-field-wide">
+          <label for="feedback-kind">What can I help with?</label>
+          <select id="feedback-kind" name="kind" required>
+            <option value="support">Support question</option>
+            <option value="bug">Bug report</option>
+            <option value="feature">Feature request</option>
+            <option value="feedback">General feedback</option>
+          </select>
+        </div>
+
+        <div class="feedback-field">
+          <label for="feedback-name">Name <span>optional</span></label>
+          <input id="feedback-name" name="name" type="text" maxlength="100" autocomplete="name">
+        </div>
+
+        <div class="feedback-field">
+          <label for="feedback-email">Email <span>optional</span></label>
+          <input
+            id="feedback-email"
+            name="email"
+            type="email"
+            maxlength="254"
+            autocomplete="email"
+            inputmode="email"
+            aria-describedby="feedback-email-help"
+          >
+          <small id="feedback-email-help">Include it only if you would like a reply.</small>
+        </div>
+
+        <div class="feedback-field feedback-field-wide">
+          <label for="feedback-subject">Subject</label>
+          <input id="feedback-subject" name="subject" type="text" minlength="3" maxlength="140" required>
+        </div>
+
+        <div class="feedback-field feedback-field-wide">
+          <label for="feedback-message">Message</label>
+          <textarea
+            id="feedback-message"
+            name="message"
+            rows="8"
+            minlength="10"
+            maxlength="5000"
+            required
+            aria-describedby="feedback-message-help"
+          ></textarea>
+          <small id="feedback-message-help">Please avoid passwords, payment details, and other sensitive information.</small>
+        </div>
+
+        <div class="feedback-field feedback-field-version">
+          <label for="extension-version">Extension version <span>optional</span></label>
+          <input
+            id="extension-version"
+            name="extensionVersion"
+            type="text"
+            maxlength="64"
+            autocomplete="off"
+            placeholder="For example, 1.4.2"
+          >
+        </div>
+
+        <input id="feedback-source" name="source" type="hidden" value="website">
+
+        <div class="feedback-honeypot" aria-hidden="true">
+          <label for="feedback-company">Company</label>
+          <input id="feedback-company" name="company" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="feedback-field feedback-field-wide feedback-verification">
+          {{- if $siteKey -}}
+            <div
+              class="cf-turnstile"
+              data-sitekey="{{ $siteKey }}"
+              data-action="feedback"
+              data-response-field-name="turnstileToken"
+              data-theme="auto"
+            ></div>
+          {{- else -}}
+            <p class="feedback-setup-notice" role="status">
+              The feedback service is being configured. Please try again later.
+            </p>
+          {{- end -}}
+        </div>
+
+        <div class="feedback-actions feedback-field-wide">
+          <button class="feedback-submit" type="submit"{{ if not $siteKey }} disabled{{ end }}>
+            <span>Send message</span>
+          </button>
+          <p class="feedback-privacy">
+            Your submission is stored in Cloudflare D1 and emailed only to support@arkadios.me.
+          </p>
+        </div>
+
+        <p id="feedback-status" class="feedback-status feedback-field-wide" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+  </article>
+
+  {{- if $siteKey -}}
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    {{- $feedbackScript := resources.Get "js/feedback.js" | minify | fingerprint -}}
+    <script src="{{ $feedbackScript.RelPermalink }}" integrity="{{ $feedbackScript.Data.Integrity }}" defer></script>
+  {{- end -}}
+{{- end -}}
