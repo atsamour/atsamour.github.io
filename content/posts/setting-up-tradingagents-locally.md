@@ -1,5 +1,5 @@
 +++
-title = " "
+title = "Running TradingAgents with existing AI subscriptions "
 description = "How I set up Tauric TradingAgents on my MacBook with CLIProxyAPI, a local rate limiter, and a choice of cloud or local models."
 tags = [ "AI", "finance", "trading", "TauricResearch" ]
 date = "2026-06-07"
